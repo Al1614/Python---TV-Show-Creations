@@ -1,0 +1,151 @@
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-around;
+    margin: 0 auto;
+    background-color: lightgray;
+}
+.flex-container1{
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-around;
+    margin: 0 auto;
+}
+.flex-container {
+    border-style: none;
+}
+.big {
+    color:red;
+}
+.container {
+    padding: 2%;
+}
+.form-group{
+    margin-bottom: 15px;
+}
+
+.with-border {
+    border: 2px solid black;
+}
+.white {
+    background-color: white;
+}
+.grey {
+    background-color: rgb(182, 182, 182);
+}
+
+.with-margins {
+    margin: 20px;
+}
+.with-padding {
+    padding: 20px;
+}
+.half-width {
+    width: 48%;
+}
+.majority-width {
+    width: 80%;
+}
+.flex-container {
+    display: flex;
+}
+.error {
+    color: red;
+    text-align: center;
+}
+
+.links2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    margin-top: 10px;
+    padding: 5px;
+}
+.alltv {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.flex-container2 {
+    margin: 80px;
+    font-family:sans-serif;
+}
+.flex-container3 {
+    margin: 80px;
+    font-family: sans-serif;
+}
+.form-group {
+    display: inline-flex;
+    margin: 15px;
+    width: 600px;
+    height: 40px;
+}
+#title, #network {
+    width: 450px;
+    height: 25px;
+    font-size: large;
+}
+#date {
+    width: 150px;
+    font-size: medium;
+}
+#desrciption{
+    height: 400px;
+    width: 300px;
+}
+.form-group1 {
+    display: inline-flex;
+    margin: 15px;
+    height: 150px;
+}
+#title, #network, #date, #description {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+.form-group2 {
+display: flex;
+justify-content: right;
+margin: 15px;
+width: 600px;
+height: 40px;
+}
+.btn-primary {
+    height: 50px;
+    width: 100px;
+    padding:10px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 4px 4px black;
+    font-size: larger;
+    background-color: red;
+    margin-right: 50px;
+    font-family: sans-serif;
+}
+.links1 {
+    display: flex;
+    justify-content: flex-end;
+}
+.container4 {
+    border-style: solid;
+    border-color: black;
+    margin: 20px;
+    padding: 30px;
+    font-family: sans-serif;
+    background-color: lightslategray;
+}
+.container5 {
+    font-size: larger;
+    font-family: sans-serif;
+}
+.flex-container4 {
+    margin: 30px;
+}
+.flex-container5 {
+    margin: 30px;
+    margin-bottom: 75px;
+}
+.headers1 {
+    color:gold;
+}

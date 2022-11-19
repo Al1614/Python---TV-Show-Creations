@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>New Show!</title>
+</head>
+
+<body>
+    <div>
+
+        <div class="flex-container2">
+            <div class="links2">
+                <a href="/shows/home">TV Shows</a>
+                <a href="/logout">Logout</a>
+            </div>
+            <h1 class="majority-width">Add a New Show!</h1>
+        </div>
+        <div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <p class="error">{{message}}</p> 
+            {% endfor %}
+            {% endif %}
+
+            {% endwith %}
+        </div>
+
+        <form action="/shows" method="post" 
+            class="flex-container3">
+            <div class="half-width">
+                <div class="form-group">
+                    <label for="title" class="form-label"><strong>Title:  </strong></label>
+                    <input type="text" name="title" class="form-control" id="title">
+                </div>
+                <div class="form-group">
+                    <label for="network" class="form-label"><strong>Network:  </strong></label>
+                    <input type="text" name="network" id="network">
+                </div>
+                <div class="form-group">
+                    <label for="date" class="form-label"><strong>Date:  </strong></label>
+                    <input type="date" class="form-control" name="date" id="date">
+                </div>
+                <div class="form-group1">
+                    <label for="description" class="form-label"><strong>Description:  </strong></label>
+                    <textarea type="text", cols="50" rows="15" name="description" class="form-control" id="description"></textarea>
+                </div>
+                <input type="hidden" name="user_id" value="{{session['user_id']}}">
+                <div class="form-group2">
+                    <input type="submit" class="btn-primary" value="Add">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+            

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Edit Show</title>
+</head>
+
+<body>
+    <div>
+        <div class="flex-container2">
+            <div class="links2">
+                <a href="/shows/home">TV Shows</a>
+                <a href="/Logout">Logout</a>
+            </div>
+            <h1 class="majority-width">Edit Show</h1>
+        </div>
+
+        <div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <p class="error">{{message}}</p> 
+            {% endfor %}
+            {% endif %}
+
+            {% endwith %}
+        </div>
+        <form action="/shows/{{show.id}}" method="post" 
+            class="flex-container3">
+            <div class="half-width">
+                <div class="form-group">
+                    <label for="title" class="form-label">Title:</label>
+                    <input type="text" name="title" class="form-control" id="title" value="{{show.title}}">
+                </div>
+                <div class="form-group">
+                    <label for="network" class="form-label">Network:</label>
+                    <input type="text" name="network" id="network" value="{{show.network}}">
+                </div>
+                <div class="form-group">
+                    <label for="date" class="form-label">Release Date:</label>
+                    <input type="date" class="form-control" name="date" id="date" value="{{show.date}}">
+                </div>
+                <div class="form-group1">
+                    <label for="description" class="form-label">Description:</label>
+                    <textarea type="text" cols="50" rows="15" name="description" class="form-control" id="description">{{show.description}}</textarea>
+                </div>
+                <input type="hidden" name="id" value="{{show.id}}">
+                <div class="form-group2">
+                    <input type="submit" class="btn-primary" value="Update">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
